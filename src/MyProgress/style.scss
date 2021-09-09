@@ -1,19 +1,15 @@
 .svg {
-  display: block;
   margin: 100px auto;
-  max-width: 100%;
   border-radius: 50%;
   background-color: rgb(216, 237, 238);
 }
 
 .svg-circle-bg {
   fill: none;
-  border-radius: 50%;
 }
 
 .svg-circle {
   fill: none;
-  border-radius: 50%;
   stroke-linecap: round;
   transform-origin: center;
   transform: rotate(-90deg);

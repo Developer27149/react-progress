@@ -1,8 +1,8 @@
-import { Box, Text } from '@chakra-ui/layout';
+import { Box } from '@chakra-ui/layout';
 import React, { useEffect, useRef, useState } from 'react';
 import './style.scss';
 
-export default function ProgressA(props) {
+export default function MyProgress(props) {
   const {
     size = 300,
     progress = 0,
@@ -27,7 +27,7 @@ export default function ProgressA(props) {
     const progressOffset = ((100 - progress) / 100) * circumference; // 百分比乘以圆周，等于当前百分比对应的显示部分值
     setOffset(progressOffset);
     svgRef.current.style = `transition: stroke-dashoffset ${time}ms ease-in-out;`;
-  }, [setOffset, circumference, progress, offset]);
+  }, [progress]);
 
   return (
     <Box>
