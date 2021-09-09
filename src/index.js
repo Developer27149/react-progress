@@ -1,28 +1,36 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { ChakraProvider, Button } from '@chakra-ui/react';
+import { ChakraProvider, Button, Box, Input } from '@chakra-ui/react';
 import ProgressA from './ProgressA/index.jsx';
 
 function App() {
   // 2. Use at the root of your app
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(10);
   return (
     <ChakraProvider>
-      <Button
-        onClick={() => setProgress(progress + 10)}
-        m="100px auto"
-        display="block"
-      >
-        +10
-      </Button>
+      <Box display="flex" justifyContent="center" flexWrap="wrap">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
+          <Button
+            onClick={() => setProgress(i * 10)}
+            m="25px"
+            display="block"
+            key={i}
+          >
+            {i}0%
+          </Button>
+        ))}
+      </Box>
       <ProgressA progress={progress} />
-      <Button
-        onClick={() => setProgress(progress - 20)}
-        m="100px auto"
+      <Input
+        w="90%"
         display="block"
-      >
-        -20
-      </Button>
+        margin="0 auto"
+        type="range"
+        value={progress}
+        onChange={(e) => {
+          setProgress(e.target.value);
+        }}
+      />
     </ChakraProvider>
   );
 }

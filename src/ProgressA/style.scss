@@ -3,7 +3,7 @@
   margin: 100px auto;
   max-width: 100%;
   border-radius: 50%;
-  background-color: rgb(191, 238, 205);
+  background-color: rgb(216, 237, 238);
 }
 
 .svg-circle-bg {
@@ -14,6 +14,10 @@
 .svg-circle {
   fill: none;
   border-radius: 50%;
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transform-box: fill-box;
 }
 .svg-circle-text {
   font-size: 2rem;

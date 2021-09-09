@@ -5,3 +5,5 @@
 # reference
 
 [How to build an SVG circular progress component using React and React Hooks - LogRocket Blog](https://blog.logrocket.com/how-to-build-an-svg-circular-progress-component-using-react-and-react-hooks/)
+
+canvas 的应用，看来有必要学习 canvas。
